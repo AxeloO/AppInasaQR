@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="PruebaEscaner.MenuConsultarCodigo">
+
+       <ScrollView>
+        <Grid>
+            
+            <Image Source="fondologin.png" Aspect="AspectFill" />
+            <BoxView Color="SkyBlue" Opacity="0.8"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>  
+                    <RowDefinition Height="Auto"/>                    
+                </Grid.RowDefinitions>
+
+                <Image Grid.Row="0" Source="iconologin" WidthRequest="100" HeightRequest="100" Margin="0,50,0,30"/>
+                
+                <StackLayout Grid.Row="1" Padding="30,20">
+                    <Label x:Name="lbBuscquedaManual" Text="Busqueda Manual" />
+                    <Entry x:Name="entryBusquedaManual" Placeholder="Capturar código de busqueda" PlaceholderColor="Gray"/>
+                    <Picker x:Name="pickerTipoBusqueda" SelectedIndexChanged="pickerTipoBusqueda_SelectedIndexChanged" Title="Opcion de busqueda"/>
+                    <Button x:Name="btnBusquedaManual" Text="Consultar Producto" BackgroundColor="White" CornerRadius="20" TextColor="SkyBlue"/>
+                                
+                </StackLayout>
+
+                <StackLayout Grid.Row="2" Padding="30,20">
+                    <Label x:Name="lbBusquedaPorCodigo" Text="Busqueda por código" />
+                    <Button x:Name="btnBusquedaPorCodigo" Text="Escanear Código" BackgroundColor="White" CornerRadius="20" TextColor="SkyBlue"/>
+                                
+                </StackLayout>
+
+                <StackLayout Grid.Row="3">
+
+                    <Button x:Name="btnAtras" Text="Regresar" BackgroundColor="White" HorizontalOptions="Center" WidthRequest="100"/>
+
+                </StackLayout>                
+            </Grid>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

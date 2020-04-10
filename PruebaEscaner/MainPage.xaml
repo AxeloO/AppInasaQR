@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="PruebaEscaner.MainPage">
+
+    <ScrollView>
+        <Grid>
+            
+            <Image Source="fondologin.png" Aspect="AspectFill" />
+            <BoxView Color="SkyBlue" Opacity="0.8"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>                    
+                </Grid.RowDefinitions>
+
+                <Image Grid.Row="0" Source="iconologin" WidthRequest="100" HeightRequest="100" Margin="0,50,0,30"/>
+                
+                <StackLayout Grid.Row="1" Padding="30,20">
+                    <Entry x:Name="entryUsuario" Placeholder="Usuario" PlaceholderColor="Gray" />
+                    <Entry x:Name="entryPassword" Placeholder="Contraseña" PlaceholderColor="Gray" IsPassword="True"/>
+                    <Button x:Name="btIniciarSesion" Text="Iniciar Sesión" BackgroundColor="White" CornerRadius="20" TextColor="SkyBlue"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Recuperar Contraseña"/>
+                        <Label Text="Registrarse" HorizontalOptions="EndAndExpand" FontAttributes="Bold"/>
+                    </StackLayout>                    
+                </StackLayout>
+
+                <StackLayout Grid.Row="2">
+
+                    <Button x:Name="btnConultarProducto" Text="Consultar Producto" BackgroundColor="White" HorizontalOptions="Center"/>
+
+                </StackLayout>                
+            </Grid>
+        </Grid>
+    </ScrollView>
+</ContentPage>
