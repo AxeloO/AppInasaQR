@@ -1,5 +1,38 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="PruebaEscaner.CarritoPage">
-    <ContentPage.Content>
-    </ContentPage.Content>
+
+
+    
+        <Grid>  
+               <Grid.RowDefinitions>                
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>                    
+                </Grid.RowDefinitions>
+            <ScrollView>
+            <ListView Grid.Row="0" x:Name="lstProductos" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label Text="CODIGO ORIGINAL"/>
+                                <Label Text="{Binding codigO_ORIGINAL}"/>
+                                <Label Text="PRECIO"/>
+                                <Label Text="{Binding preciO_MONEDA}"/>
+                                <Label Text="DESCRIPCION"/>
+                                <Label Text="{Binding descrip}"/>                                
+                                <Label Text=" " BackgroundColor="SkyBlue"/>
+                                </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+                </ScrollView>
+             <StackLayout Grid.Row="1" Orientation="Horizontal">
+                <Button x:Name="btnAtras" Text="Atras" BackgroundColor="Gray" CornerRadius="20" TextColor="SkyBlue" HorizontalOptions="StartAndExpand" WidthRequest="140" Clicked="btnAtras_Clicked"/>
+                <Button x:Name="btnCotizacion" Text="Enviar Cotizacion" BackgroundColor="Gray" CornerRadius="20" TextColor="SkyBlue" HorizontalOptions="EndAndExpand" WidthRequest="140" Clicked="btnCotizacion_Clicked"/>
+            </StackLayout>  
+
+      </Grid>
+    
+
 </ContentPage>

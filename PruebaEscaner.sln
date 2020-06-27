@@ -54,4 +54,16 @@ Global
 		{AD0943B9-2C00-41DD-BE7E-C6B5CB756488}.Release|iPhone.ActiveCfg = Release|Any CPU
 		{AD0943B9-2C00-41DD-BE7E-C6B5CB756488}.Release|iPhone.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
+		$0.StandardHeader = $2
+		$0.VersionControlPolicy = $3
+		$3.CommitMessageStyle = $4
+		$4.Indent = @\t
+		$4.LastFilePostfix = "@:\n  "
+		$4.IncludeDirectoryPaths = True
+		$4.LineAlign = 0
+	EndGlobalSection
 EndGlobal

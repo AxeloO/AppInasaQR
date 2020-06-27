@@ -4,31 +4,33 @@
     <ScrollView>
         <Grid>
             
-            <Image Source="fondologin.png" Aspect="AspectFill" />
-            <BoxView Color="SkyBlue" Opacity="0.8"/>
+            <Image Source="fondologin.png" Aspect="AspectFill" />            
+            <BoxView Color="white" Opacity="0.8"/>
 
             <Grid>
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="Auto"/>                    
                 </Grid.RowDefinitions>
 
-                <Image Grid.Row="0" Source="iconologin" WidthRequest="100" HeightRequest="100" Margin="0,50,0,30"/>
+                <Image Grid.Row="0" Source="InasaLogo" WidthRequest="200" HeightRequest="230" Margin="0,0,0,-40"/>
+                <Image Grid.Row="1" Source="fordLogo.png" WidthRequest="100" HeightRequest="50" Margin="0,0,0,30"/>
                 
-                <StackLayout Grid.Row="1" Padding="30,20">
+                <StackLayout Grid.Row="2" Padding="30,50">
                     <Entry x:Name="entryUsuario" Placeholder="Usuario" PlaceholderColor="Gray" />
                     <Entry x:Name="entryPassword" Placeholder="Contraseña" PlaceholderColor="Gray" IsPassword="True"/>
-                    <Button x:Name="btIniciarSesion" Text="Iniciar Sesión" BackgroundColor="White" CornerRadius="20" TextColor="SkyBlue"/>
+                    <Button x:Name="btIniciarSesion" Text="Iniciar Sesión" BackgroundColor="White" CornerRadius="20" TextColor="Black"/>
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Recuperar Contraseña"/>
                         <Label Text="Registrarse" HorizontalOptions="EndAndExpand" FontAttributes="Bold"/>
                     </StackLayout>                    
                 </StackLayout>
 
-                <StackLayout Grid.Row="2">
+                <StackLayout Grid.Row="3">
 
-                    <Button x:Name="btnConultarProducto" Text="Consultar Producto" BackgroundColor="White" HorizontalOptions="Center"/>
+                    <Button x:Name="btnConultarProducto" Text="Consultar Producto" BackgroundColor="White" HorizontalOptions="Center" TranslationY="-20" TextColor="Black" CornerRadius="20"/>
 
                 </StackLayout>                
             </Grid>

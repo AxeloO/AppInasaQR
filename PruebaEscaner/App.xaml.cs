@@ -15,6 +15,8 @@ namespace PruebaEscaner
 
         protected override void OnStart()
         {
+            Current.Properties["TieneProductoElCarrito"] = "NO";
+            Current.Properties["NombreUsuarioLogin"] = "Invitado";
         }
 
         protected override void OnSleep()

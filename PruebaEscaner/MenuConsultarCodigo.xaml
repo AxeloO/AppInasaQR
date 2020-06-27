@@ -8,19 +8,24 @@
             <BoxView Color="SkyBlue" Opacity="0.8"/>
 
             <Grid>
-                <Grid.RowDefinitions>
+                <Grid.RowDefinitions>                    
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>  
                     <RowDefinition Height="Auto"/>                    
                 </Grid.RowDefinitions>
-
-                <Image Grid.Row="0" Source="iconologin" WidthRequest="100" HeightRequest="100" Margin="0,50,0,30"/>
+                
+                <StackLayout TranslationX="20" Orientation="Horizontal" Grid.Row="0" Margin="0,50,0,30" >
+                    <Label Text="Bienvenido : "/>
+                    <Label x:Name="lblUsrlogin" Text="invitado" TextColor="Black"/>                    
+                </StackLayout>
+                
+                                
                 
                 <StackLayout Grid.Row="1" Padding="30,20">
                     <Label x:Name="lbBuscquedaManual" Text="Busqueda Manual" />
-                    <Entry x:Name="entryBusquedaManual" Placeholder="Capturar código de busqueda" PlaceholderColor="Gray"/>
                     <Picker x:Name="pickerTipoBusqueda" SelectedIndexChanged="pickerTipoBusqueda_SelectedIndexChanged" Title="Opcion de busqueda"/>
+                    <Entry x:Name="entryBusquedaManual" Placeholder="Capturar código de busqueda" PlaceholderColor="Gray"/>                    
                     <Button x:Name="btnBusquedaManual" Text="Consultar Producto" BackgroundColor="White" CornerRadius="20" TextColor="SkyBlue"/>
                                 
                 </StackLayout>
@@ -31,11 +36,11 @@
                                 
                 </StackLayout>
 
-                <StackLayout Grid.Row="3">
-
-                    <Button x:Name="btnAtras" Text="Regresar" BackgroundColor="White" HorizontalOptions="Center" WidthRequest="100"/>
-
-                </StackLayout>                
+                <StackLayout Grid.Row="3" Orientation="Horizontal">
+                    <Button x:Name="btnAtras" Text="Regresar" BackgroundColor="White" HorizontalOptions="StartAndExpand" WidthRequest="100" HeightRequest="40" TranslationY="-20" TranslationX="10" CornerRadius="20"/>
+                    <Button x:Name="btnCarritoCompra"  BackgroundColor="White" Text="Carrito"  WidthRequest="120" HeightRequest="40" HorizontalOptions="EndAndExpand" TranslationY="-20" TranslationX="-10" CornerRadius="20"/>
+                </StackLayout>
+                
             </Grid>
         </Grid>
     </ScrollView>

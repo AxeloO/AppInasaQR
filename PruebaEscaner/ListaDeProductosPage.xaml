@@ -1,29 +1,99 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="PruebaEscaner.ListaDeProductosPage">
 
-    <ScrollView>
+  
         <Grid>
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>                
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
-            <StackLayout Grid.Row="0" Padding="30,20">
-
-                <Button x:Name="btnSalir" Text="Salir" BackgroundColor="White" CornerRadius="20" TextColor="SkyBlue"/>
-                
+            <StackLayout Grid.Row="0" Padding="30,20" Orientation="Horizontal">               
+                 <Button x:Name="btnSalir" Text="Atras" BackgroundColor="SkyBlue" WidthRequest="120" MinimumHeightRequest="40" CornerRadius="20" TextColor="White" HorizontalOptions="StartAndExpand" />
+                <Button x:Name="btnAgregarLista" Text="Agregar" BackgroundColor="SkyBlue" WidthRequest="120" MinimumHeightRequest="40" CornerRadius="20" TextColor="White" HorizontalOptions="EndAndExpand" />
 
             </StackLayout>
 
-            <StackLayout Grid.Row="1">
-                <Label x:Name="lblcodigO_INASA" TextColor="SkyBlue"/>
+            <ScrollView Grid.Row="1" TranslationY="-20">
+                <StackLayout Padding="5" >
+
+                    <StackLayout>
+                    <Label TextColor="Black" Text="CODIGO ORIGINAL"/>
+                    <Label x:Name="lblcodigO_Original" TextColor="Blue"/>
+                    </StackLayout>
+
+                    <StackLayout>
+                    <Label TextColor="Black" Text="CODIGO INASA"/>
+                    <Label x:Name="lblcodigO_INASA" TextColor="Blue"/>
+                    </StackLayout>                                      
+
+                    <StackLayout>
+                    <Label TextColor="Black" Text="CODIGO FORD"/>
+                    <Label x:Name="lblcodigO_Ford" TextColor="Blue"/>
+                    </StackLayout>
+
+                     <StackLayout>
+                    <Label TextColor="Black" Text="IMAGEN DEL PRODUCTO"/>
+                    <Image x:Name="imgProducto" WidthRequest="120"/>
+                    </StackLayout>                
+
+                    <StackLayout>
+                    <Label TextColor="Black" Text="DESCRIPCION"/>
+                    <Label x:Name="lblDescripcion" TextColor="Blue"/>
+                    </StackLayout>
+
+                    <StackLayout>
+                    <Label TextColor="Black" Text="UNIDAD DE MEDIDA"/>
+                      <Label x:Name="lblUnidad_De_Medida" TextColor="Blue"/>
+                    </StackLayout>
+
+                    <StackLayout>
+                    <Label TextColor="Black" Text="INVENTARIO FORD"/>
+                      <Label x:Name="lblInventario_Ford" TextColor="Blue"/>
+                    </StackLayout>
+
+                    <StackLayout>
+                    <Label TextColor="Black" Text="INVENTARIO INASA"/>
+                      <Label x:Name="lblInventario_Inasa" TextColor="Blue"/>
+                    </StackLayout>
+
+                     <StackLayout>
+                    <Label TextColor="Black" Text="ESTATUS FORD"/>
+                      <Label x:Name="lblEstatus_Ford" TextColor="Blue"/>
+                    </StackLayout>
+
+                    <StackLayout>
+                    <Label TextColor="Black" Text="ESTATUS INASA"/>
+                      <Label x:Name="lblEstatus_Inasa" TextColor="Blue"/>
+                    </StackLayout>
+
+                    <StackLayout>
+                    <Label TextColor="Black" Text="BLANKET"/>
+                    <Label x:Name="lblblanket" TextColor="Blue"/>
+                    </StackLayout>
+
+                    <StackLayout>
+                    <Label TextColor="Black" Text="PRECIO / MONEDA"/>
+                    <Label x:Name="lbl_Precio_Moneda" TextColor="Blue"/>
+                    </StackLayout>
+                                               
+                    <StackLayout>
+                    <Label TextColor="Black" Text="ESTATUS FABRICA"/>
+                    <Label x:Name="lblEstatus_Fabrica" TextColor="Blue"/>
+                    </StackLayout>  
+                  
+                </StackLayout>
+            </ScrollView>
+                       
+
+             <StackLayout Grid.Row="2" TranslationY="-20">                 
+                 <Button x:Name="btnCarrito" Text="Carrito" BackgroundColor="SkyBlue" WidthRequest="300" MinimumHeightRequest="150" CornerRadius="20" TextColor="White" HorizontalOptions="CenterAndExpand"  />
             </StackLayout>
 
-            
-        </Grid>
-    </ScrollView>
+
+        </Grid >
 
 
 
