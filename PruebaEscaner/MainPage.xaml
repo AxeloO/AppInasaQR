@@ -15,8 +15,8 @@
                     <RowDefinition Height="Auto"/>                    
                 </Grid.RowDefinitions>
 
-                <Image Grid.Row="0" Source="InasaLogo" WidthRequest="200" HeightRequest="230" Margin="0,0,0,-40"/>
-                <Image Grid.Row="1" Source="fordLogo.png" WidthRequest="100" HeightRequest="50" Margin="0,0,0,30"/>
+                <Image Grid.Row="0" Source="logoInasaSmartLite" WidthRequest="200" HeightRequest="180" Margin="0,50,0,20"/>
+                <Image Grid.Row="1" Source="fordLogo.png" WidthRequest="100" HeightRequest="50" Margin="0,0,0,0"/>
                 
                 <StackLayout Grid.Row="2" Padding="30,50">
                     <Entry x:Name="entryUsuario" Placeholder="Usuario" PlaceholderColor="Gray" />

@@ -36,8 +36,8 @@ namespace PruebaEscaner
             string strMetodoCadena = "Login/";
             //strIpDeConexion = "http://192.168.0.7:8081/";
             //strIpDeConexion = "http://192.168.10.218:100/";
-            //strIpDeConexion = "http://192.168.100.43:100/";
-            strIpDeConexion = "http://192.168.100.24:100/";
+            strIpDeConexion = "http://192.168.100.43:100/";
+            //strIpDeConexion = "http://192.168.100.24:100/";
 
             try
             {

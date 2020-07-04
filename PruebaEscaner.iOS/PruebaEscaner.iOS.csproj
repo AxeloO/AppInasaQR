@@ -11,7 +11,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>PruebaEscaner.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>PruebaEscaner.iOS</AssemblyName>
+    <AssemblyName>INASA SMART LITE.iOS</AssemblyName>
     <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
   </PropertyGroup>
@@ -154,5 +154,6 @@
     <BundleResource Include="Resources\IconoCarComp.png" />
     <BundleResource Include="Resources\ImgPrueba.jpeg" />
     <BundleResource Include="Resources\fordLogo.png" />
+    <BundleResource Include="Resources\logoInasaSmartLite.png" />
   </ItemGroup>
 </Project>

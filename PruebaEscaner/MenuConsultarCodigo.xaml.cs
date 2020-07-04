@@ -103,9 +103,9 @@ namespace PruebaEscaner
                             Navigation.PopModalAsync();
 
                             //strIpDeConexion = "http://192.168.0.7:8081/";
-                            //strIpDeConexion = "http://192.168.100.43:100/";
+                            strIpDeConexion = "http://192.168.100.43:100/";
                             //strIpDeConexion = "http://192.168.10.218:100/";
-                            strIpDeConexion = "http://192.168.100.24:100/";
+                            //strIpDeConexion = "http://192.168.100.24:100/";
                             strMetodoCadena = "LeerExcel/";
                             strCodigoEscaneado = result.Text;
                             var strLigaConsultar = string.Empty;
@@ -153,9 +153,9 @@ namespace PruebaEscaner
             {
                 //cadeja de jorge
                 //strIpDeConexion = "http://192.168.0.7:8081/";
-                //strIpDeConexion = "http://192.168.100.43:100/";
+                strIpDeConexion = "http://192.168.100.43:100/";
                 //strIpDeConexion = "http://192.168.10.218:100/";
-                strIpDeConexion = "http://192.168.100.24:100/";
+                //strIpDeConexion = "http://192.168.100.24:100/";
                 strMetodoCadena = "LeerExcel/";
                 strOpcionElegida = strTipoDeBusqueda;
                 strCodigoIndresado = entryBusquedaManual.Text;
