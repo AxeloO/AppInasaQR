@@ -36,8 +36,6 @@ namespace PruebaEscaner
             btnSalir.Clicked += btnSalir_Clicked;
             btnAgregarLista.Clicked += BtnAgregarLista_Clicked;
             btnCarrito.Clicked += BtnCarrito_Clicked;
-
-
             lblcodigO_Original.Text = producto.codigO_ORIGINAL;
             lblcodigO_INASA.Text = producto.codigO_INASA;
             lblcodigO_Ford.Text = producto.codigO_FORD;

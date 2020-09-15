@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Essentials;
+using System.Collections.ObjectModel;
+using System.IO;
 
 namespace PruebaEscaner
 {
@@ -10,11 +12,14 @@ namespace PruebaEscaner
     {
         List<Entidades.EntProductos> ListaDeProductoCotizador;
         Rdn.RDNCarrito rDNCarrito = new Rdn.RDNCarrito();
+        
         public CarritoPage(List<Entidades.EntProductos> ListaDeProdcutoCarrito)
         {            
             InitializeComponent();
             ListaDeProductoCotizador = ListaDeProdcutoCarrito;         
             lstProductos.ItemsSource = ListaDeProdcutoCarrito;
+            
+
             //lstProductos.ItemsSource = BindingContext;            
         }
 
@@ -77,7 +82,7 @@ namespace PruebaEscaner
             return TextoCompleto;
         }
 
-        void btnAtras_Clicked(System.Object sender, System.EventArgs e)
+        private void btnAtras_Clicked(System.Object sender, System.EventArgs e)
         {
             try
             {
@@ -102,8 +107,29 @@ namespace PruebaEscaner
 
             catch (Exception ex)
             {
-
+                
             }
         }
+        
+        
+        public ImageSource LoadImage(string strImagen)
+        {           
+            var byteArray = Convert.FromBase64String(strImagen);
+            Stream stream = new MemoryStream(byteArray);
+            var imageSource = ImageSource.FromStream(() => stream);
+            //image.Source = imageSource;
+
+            
+            return imageSource;
+            
+
+        }
+
+        private void EliminarProductoRepetido()
+        {
+            string strItemSeleccionado = string.Empty;
+           // strItemSeleccionado = lstProductos.ItemSelected;
+        }
+
     }
 }

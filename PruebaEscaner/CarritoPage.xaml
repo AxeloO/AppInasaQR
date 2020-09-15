@@ -1,38 +1,52 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="PruebaEscaner.CarritoPage">
 
-
-    
-        <Grid>  
-               <Grid.RowDefinitions>                
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="Auto"/>                    
-                </Grid.RowDefinitions>
-            <ScrollView>
-            <ListView Grid.Row="0" x:Name="lstProductos" HasUnevenRows="True">
-                <ListView.ItemTemplate>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ScrollView>
+            <CollectionView Grid.Row="0" x:Name="lstProductos" >
+                <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <ViewCell>
-                            <StackLayout>
-                                <Label Text="CODIGO ORIGINAL"/>
-                                <Label Text="{Binding codigO_ORIGINAL}"/>
-                                <Label Text="PRECIO"/>
-                                <Label Text="{Binding preciO_MONEDA}"/>
-                                <Label Text="DESCRIPCION"/>
-                                <Label Text="{Binding descrip}"/>                                
-                                <Label Text=" " BackgroundColor="SkyBlue"/>
-                                </StackLayout>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-                </ScrollView>
-             <StackLayout Grid.Row="1" Orientation="Horizontal">
-                <Button x:Name="btnAtras" Text="Atras" BackgroundColor="Gray" CornerRadius="20" TextColor="SkyBlue" HorizontalOptions="StartAndExpand" WidthRequest="140" Clicked="btnAtras_Clicked"/>
-                <Button x:Name="btnCotizacion" Text="Enviar Cotizacion" BackgroundColor="Gray" CornerRadius="20" TextColor="SkyBlue" HorizontalOptions="EndAndExpand" WidthRequest="140" Clicked="btnCotizacion_Clicked"/>
-            </StackLayout>  
+                        <Frame                            
+                            CornerRadius="5"
+                            IsClippedToBounds="False">
+                            <Grid HeightRequest="100">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width=".3*"/>
+                                    <ColumnDefinition Width=".7*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height=".5*"/>
+                                    <RowDefinition Height=".5*"/>
+                                </Grid.RowDefinitions>
 
-      </Grid>
-    
+                                <Image x:Name="imgProducto"  Grid.Column="0" Grid.RowSpan="2" Source="{Binding Path=LoadImage}"/>
+
+                                <StackLayout Grid.Column="1" Grid.Row="0">
+                                    <Label Text="CODIGO ORIGINAL" FontAttributes="Bold"/>
+                                    <Label Text="{Binding codigO_ORIGINAL}"/>
+                                </StackLayout>
+
+                                <StackLayout Grid.Column="1" Grid.Row="1">
+                                    <Label Text="PRECIO" FontAttributes="Bold"/>
+                                    <Label Text="{Binding preciO_MONEDA}"/>
+                                </StackLayout>
+                            </Grid>
+                        </Frame>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </ScrollView>
+        <StackLayout Grid.Row="1" Orientation="Horizontal">
+            <Button x:Name="btnAtras" Text="Atras" BackgroundColor="Gray" CornerRadius="20" TextColor="SkyBlue" HorizontalOptions="StartAndExpand" WidthRequest="140" Clicked="btnAtras_Clicked"/>
+            <Button x:Name="btnCotizacion" Text="Enviar Cotizacion" BackgroundColor="Gray" CornerRadius="20" TextColor="SkyBlue" HorizontalOptions="EndAndExpand" WidthRequest="140" Clicked="btnCotizacion_Clicked"/>
+        </StackLayout>
+
+    </Grid>
+
 
 </ContentPage>
